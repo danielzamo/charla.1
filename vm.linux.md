@@ -2,14 +2,14 @@
 
 ## Diferentes tecnologías
 
-La siguiente tabla, es una muy resumida lista, de las muchas virtualizaciones disponibles. En este item solo puntualizamos sobre las tecnologias con paradigma de _virtualizacion "completa"_ y de este grupo, intentamos puntualizar en las mas populares, que puedan usarse sobre el sistema operativo Windows 10/11.
+La siguiente tabla (referencia [aquí](https://www.softzone.es/programas/utilidades/diferencias-vmware-virtualbox-hyper-v/)), es una muy resumida lista de características comparativas. En este item, solo puntualizamos en unas pocas de las tecnologias con paradigma de _virtualizacion "completa"_ y de este grupo, remarcar solo en las mas populares, que puedan usarse sobre el sistema operativo Windows 10/11.
 
 |                       | VMWare workstation PRO| VMWare Player| VirtualBox| Hyper-V
 |:--                    |:--                    |:--           |:--        |:--
-|Facilidad de uso       |Medio                  |Facil         |Facil      | 
-|Rendimiento            |Bueno                  |Bueno         | Medio     |
-|Instantáneas           |Si                     |No            |Si         |
-|Integración con Windows|Si                     |Si            |Si         | 
+|Facilidad de uso       |Medio                  |Facil         |Facil      | Complicado
+|Rendimiento            |Bueno                  |Bueno         | Medio     | Bueno
+|Instantáneas           |Si                     |No            |Si         | No
+|Integración con Windows|Si                     |Si            |Si         | No
 |Precio                 |De pago                |Gratis        |Gratis     | Gratis
 |Otros                  |Exelente seguridad     |              |Opensource | Solo en Windows 10 Pro Soporte WSL y WSL2
 |Sistemas compatibles   | Windows, Linux, macOS | Windows, Linux, macOS | Windows, Linux, macOS| Windows (completo), Linux (con limitaciones)
