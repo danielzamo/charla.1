@@ -25,3 +25,6 @@ La escritura de este articulo ha sido realizado en un despliegue llamador labora
 sudo apt update && sudo apt -y upgrade
 sudo apt install htop rsync dnsutils htop lsof
 ```
+
+---
+

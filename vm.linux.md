@@ -35,3 +35,6 @@ En esta [captura][vmware.workstation.player] se muestran las VM (locales) que se
 ![Vmware Workstation Player][vmware.workstation.player]
 
 [vmware.workstation.player]: img/vmware.workstation.player.png
+
+---
+

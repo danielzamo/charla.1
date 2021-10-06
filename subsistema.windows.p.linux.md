@@ -90,7 +90,7 @@ Sobre el primer inicio Ubuntu solicita establecer las credenciales de un primer 
 [ubuntu.lts.iniciar_10]: img/ubuntu.lts.iniciar_10.png
 [ubuntu.lts.primer.login_11]: img/ubuntu.lts.primer.login_11.png
 
---- 
+---
 
 ## Algunas notas respecto al estado actual de WSL
 - En la [esta][comparacion.wsl.1.2] referencia se enumeran algunas comparaciones de WSL 1 vs WSL 2.
@@ -100,7 +100,7 @@ Sobre el primer inicio Ubuntu solicita establecer las credenciales de un primer 
   - Desarrollo, prueba y ejecucion de scripting desde un CLI, mediantes comandos mas propios de sistemas basados en Unix (Linux)
 - El fichero `/etc/hosts` y `C:\Windows\System32\drivers\etc\hosts`
 
---- 
+---
 
 ## Tip
 
@@ -172,7 +172,10 @@ apt install rsync dnsutils
 - [Comparación de WSL 1 con WSL 2][comparacion.wsl.1.2] 
 
 [comparacion.wsl.1.2]: https://docs.microsoft.com/es-es/windows/wsl/compare-versions
-  
+
 [inst.wsl]: https://docs.microsoft.com/es-es/windows/wsl/install "Instalacion de WSL en Windows 10"
 [inst.wsl.win]: https://www.windowscentral.com/install-windows-subsystem-linux-windows-10
-[comparative.wsl.vs.ubuntu]: https://www.phoronix.com/scan.php?page=article&item=wsl-wsl2-tr3970x&num=1 
+[comparative.wsl.vs.ubuntu]: https://www.phoronix.com/scan.php?page=article&item=wsl-wsl2-tr3970x&num=1
+
+---
+
