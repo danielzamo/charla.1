@@ -113,7 +113,7 @@ Sobre el primer inicio Ubuntu solicita establecer las credenciales de un primer 
 
   ```bash
   sudo mkdir -pv /mnt/testing-charla
-  sudo mount -t drvfs '\\axians-data\Users' /mnt/testing-charla
+  sudo mount -t drvfs '\\<IP>\<NAME_SHARE>' /mnt/testing-charla
   ```
   
   Nota: desde el `cmd` de Windows con `net view \\<IP>/all`  se puede ver que comparte el host.
