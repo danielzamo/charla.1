@@ -177,6 +177,15 @@ _[1]_ Definir la varible `SSHPASS` al entorno de sesión del usuario.
 echo $SSHPASS
 # Agregar variable a fichero de entorno inicial
 echo -e "\n# Add my vars\nexport SSHPASS='<MY_PASSWORD_HOST_REMOTE>'" >> ~/.bashrc
+```
+
+_[2]_ Verificación
+
+Una vez creada asignada la variable de entorno `SSHPASS` se puede invocar `ssh` (o comandos basados en el protocolo/aplicación como `rsync`, `scp`, `etc`) y pasar el password mediante `sshpass`. Es lo que se realiza a continuación.
+
+```bash
+# Cargar el environment del usuario (sin tener que desloguearse)
+source ~/.bashrc
 # Verificación
 ## Emitir el comando uptime en el host remoto
 sshpass -e ssh root@192.168.20.138 uptime
