@@ -4,7 +4,7 @@ En este documento se enumeran algunas de los paquetes y/o herramientas para util
 
 Basicamente en este documento se muestran los siguientes comandos:
 
-- `sshpass` --> para automatizar el ingreso de la password, en la autenticaciones sobre servidores ssh, vía contraseñas.
+- `sshpass` --> para automatizar el ingreso de la password, en la autenticaciones sobre servidores ssh, vía contraseñas (__*"advertencia"*__).
 - `tmux` --> como multiplexor de terminales.
 - `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
 
@@ -130,7 +130,11 @@ Nmap done: 1 IP address (1 host up) scanned in 3.87 seconds
 
 ### Practicando sobre servidor de ssh
 
-#### Comando sshpass (ssh server validación con contraseña)
+#### Comando sshpass (servidores ssh con validación por contraseña)
+
+> La utilización de este comando tiene sus precauciones. La contraseña debe ser ingresada en texto plano en la propia linea de comando al invocar el comando.
+> 
+> Para enmascarar esto se mostraran dos estrategíaas. 
 
 Con __*SSHPass*__ se puede automatizar el ingreso de la contraseña en las conexiones hacia servidores __ssh__, donde su autenticación este basada en "contraseña".
 
@@ -201,14 +205,25 @@ sshpass -e ssh -o "StrictHostKeyChecking no" root@192.168.20.138 uptime
 
 Nota: `'<MY_PASSWORD_HOST_REMOTE>'` es el password del usuario del servidor ssh al que se quiere conectar.
 
+
+## Ejecutando comandos en paralelo, sobre varios servidores
+
+### Instalando pssh sobre el WSL - Ubuntu 20.04 LTS
+
+```bash
+sudo su
+apt update && apt -y upgrade
+apt -y install pssh
+```
+
 ---
 
 ## Referencias
 
-- [4 Useful Tools to Run Commands on Multiple Linux Servers][tools.cmds.multiple.linux]
-- 
-- 
-- 
+- [4 Useful Tools to Run Commands on Multiple Linux Servers][tools.cmds.multiple.linux] 
+- [How to use parallel ssh (PSSH) for executing commands in parallel on a number of Linux/Unix/BSD servers][pssh.use] 
+  
+[pssh.use]:https://www.cyberciti.biz/cloud-computing/how-to-use-pssh-parallel-ssh-program-on-linux-unix/
 
 [tools.cmds.multiple.linux]: https://www.tecmint.com/run-commands-on-multiple-linux-servers/
 
