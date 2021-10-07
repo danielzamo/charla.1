@@ -5,7 +5,7 @@ En este documento se enumeran algunas de los paquetes y/o herramientas para util
 Basicamente en este documento se muestran los siguientes comandos:
 
 - <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
-- `sshpass` --> para automatizar el ingreso de la password, en la autenticaciones sobre servidores ssh, vía contraseñas (__*"advertencia"*__).
+- <a href="#sshpass">`sshpass`</a> --> para automatizar el ingreso de la password, en la autenticación sobre servidores ssh, (configuración de acceso vía contraseñas (__*"advertencia"*__)).
 - `tmux` --> como multiplexor de terminales.
 - `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
 
@@ -131,8 +131,10 @@ Nmap done: 1 IP address (1 host up) scanned in 3.87 seconds
 
 ### Practicando sobre servidor de ssh
 
-#### Comando sshpass (servidores ssh con validación por contraseña)
+<h4 id="sshpass">Comando sshpass</h4> 
 
+> Valido principalmente para conectarse a servidores ssh con validación por contraseña)
+>
 > La utilización de este comando tiene sus precauciones. La contraseña debe ser ingresada en texto plano en la propia linea de comando al invocar el comando.
 > 
 > Para enmascarar esto se mostraran dos estrategíaas. 
