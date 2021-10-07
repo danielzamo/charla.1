@@ -4,6 +4,7 @@ En este documento se enumeran algunas de los paquetes y/o herramientas para util
 
 Basicamente en este documento se muestran los siguientes comandos:
 
+- <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
 - `sshpass` --> para automatizar el ingreso de la password, en la autenticaciones sobre servidores ssh, vía contraseñas (__*"advertencia"*__).
 - `tmux` --> como multiplexor de terminales.
 - `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
@@ -65,7 +66,7 @@ dnf -y --enablerepo=epel install htop
 
 Las siguientes prácticas, han sido realizadas para la elaboración de este documento. En cada una de las mismas, se indicará desde que host (anfitrión desde el WSL - Ubuntu o el guest virtual correspondiente del [laboratorio][laboratorio.1]) es que se realizan las mismas. 
 
-### Practicando el comando `nmap` 
+<h3 id="nmap">Practicando el comando `nmap`</h3> 
 
 #### Escanear/descubrir mi red de prueba
 
@@ -170,6 +171,8 @@ Ejemplo: Consultar que versión de Linux basado en Red Hat tiene instalado el IP
 sshpass -p <PASSWORD_TEXTO_PLANO> ssh root@192.168.20.138 cat /etc/redhat-release
 ```
 
+<h2 id="hello">Hello</h2>
+
 __*Establecer SSHPASS como variable de entorno*__
 
 Al invocar `sshpass`  con la La opción `-e`, el comando hace que el password sea establecido desde la variable de entorno de sesión `SSHPASS`. En el siguiente ejemplo se establece esta variable en la sesión del usuario. De este modo logramos ocultar o enmascar la contraseña, al invocar la ejecución del `ssh`
@@ -205,6 +208,8 @@ sshpass -e ssh -o "StrictHostKeyChecking no" root@192.168.20.138 uptime
 
 Nota: `'<MY_PASSWORD_HOST_REMOTE>'` es el password del usuario del servidor ssh al que se quiere conectar.
 
+<a href="#hello">Hello</a>
+
 
 ## Ejecutando comandos en paralelo, sobre varios servidores
 
@@ -215,6 +220,8 @@ sudo su
 apt update && apt -y upgrade
 apt -y install pssh
 ```
+
+---
 
 ---
 
