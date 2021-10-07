@@ -1,6 +1,12 @@
-# Herramientas utilidades para CLI
+# Herramientas utilidades para CLI Linux
 
 En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Se muestran algunos ejemplos.
+
+Basicamente en este documento se muestran los siguientes comandos:
+
+- `sshpass` --> para automatizar el ingreso de la password, en la autenticaciones sobre servidores ssh, vía contraseñas.
+- `tmux` --> como multiplexor de terminales.
+- `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
 
 ## Laboratorio de prueba utilizado para este trabajo
 
@@ -196,4 +202,13 @@ sshpass -e ssh -o "StrictHostKeyChecking no" root@192.168.20.138 uptime
 Nota: `'<MY_PASSWORD_HOST_REMOTE>'` es el password del usuario del servidor ssh al que se quiere conectar.
 
 ---
+
+## Referencias
+
+- [4 Useful Tools to Run Commands on Multiple Linux Servers][tools.cmds.multiple.linux]
+- 
+- 
+- 
+
+[tools.cmds.multiple.linux]: https://www.tecmint.com/run-commands-on-multiple-linux-servers/
 
