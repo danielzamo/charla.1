@@ -14,7 +14,6 @@ El último contenido de ficheros en el "directory work" original de este reposit
 
 ```bash
 ├── README.md
-├── README.pdf
 ├── charla.1.drawio
 ├── cli.tools.md
 ├── img
@@ -46,7 +45,7 @@ El último contenido de ficheros en el "directory work" original de este reposit
         └── windows.10-disk1.vmdk
 ```
 
-Nota del autor: no todos los ficheros son publicados, ni publicados en este repositorio.
+Nota del autor: no todos los ficheros son públicos en este repositorio.
 
 ---
 
