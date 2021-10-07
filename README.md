@@ -8,5 +8,45 @@ Este documento incluye los siguientes ficheros
 
 ---
 
+## Contenido último
+
+El último contenido de ficheros en el "directory work" original de este repositorio es:
+
+```bash
+├── README.md
+├── README.pdf
+├── charla.1.drawio
+├── cli.tools.md
+├── img
+│   ├── activar.caract.windows_4.png
+│   ├── activar.subsistema.windows.linux_5.png
+│   ├── aplicaciones.y.caracteristicas_3.png
+│   ├── aplicaciones_2.png
+│   ├── ejecutar.powershell.png
+│   ├── laboratorio.1.png
+│   ├── microsoft_store_6.png
+│   ├── mount.w.png
+│   ├── setting_1.png
+│   ├── teminal.cli.png
+│   ├── ubuntu.lts.iniciar_10.png
+│   ├── ubuntu.lts.primer.login_11.png
+│   ├── ubuntu.lts_7.png
+│   ├── ubuntu.lts_8.png
+│   ├── ubuntu.lts_9.png
+│   └── vmware.workstation.player.png
+├── pdf.out
+│   ├── cli.tools.pdf
+│   ├── subsistema.windows.p.linux.pdf
+│   └── vm.linux.pdf
+├── seguimiento.md
+├── subsistema.windows.p.linux.md
+├── vm.linux.md
+└── vms
+    └── laboratorio.1
+        └── windows.10-disk1.vmdk
+```
+
+Nota del autor: no todos los ficheros son publicados, ni publicados en este repositorio.
+
 ---
 
