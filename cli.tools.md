@@ -1,8 +1,8 @@
 # Herramientas utilidades para CLI Linux
 
-En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrandose algunos ejemplos. Para este fin se despliegan VMs sobre un laboratorio.
+En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrándose algunos ejemplos. Para este fin se despliegan VMs sobre un laboratorio.
 
-Basicamente en este documento se muestran los siguientes comandos:
+Básicamente en este documento se muestran los siguientes comandos:
 
 - <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
 - <a href="#sshpass">`sshpass`</a> --> para automatizar el ingreso de la password, en la autenticación sobre servidores ssh, (configuración de acceso vía contraseñas (__*"advertencia"*__)).

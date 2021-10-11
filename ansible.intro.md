@@ -26,7 +26,7 @@ dnf -y install ansible
 
 > Una vez instalado, ansible queda disponible de utilizar. Para el laboratorio 2, se ha realizado una modificación menor a la configuración inicial del aplicativo.
 > 
-> Por seguridad y privacidad de datos, en este trabajo no se muestran los inventarios utilizados, para las pruebas. Dichos ficheros de configuración, son compartidos en el repositorio privado donde se deja todo el material creado para este trabajo.
+> Por seguridad y privacidad de datos, en este trabajo no se muestran los inventarios utilizados, para las pruebas. Dichos ficheros de configuración, son compartidos en el repositorio privado donde se deja todo el material creado para estas prácticas.
 
 ## Confirmando configuración
 
