@@ -10,17 +10,25 @@ Para presentar un uso inicial básico de Ansible, es que se ha desplegado [este 
 
 ## Instalando Ansible en WSL Ubuntu 20.04 LTS
 
+```bash
+apt update && apt -y upgrade
+apt install ansible openssh-clients
+```
+
 ## Instalando Ansible en Fedora 34
 
-## Mi inventario inicial
+```bash
+dnf -y upgrade
+dnf -y install ansible 
+```
+
+## Configuración inicial e inventario
+
+> Una vez instalado, ansible queda disponible de utilizar. Para el laboratorio 2, se ha realizado una modificación menor a la configuración inicial del aplicativo.
+> 
+> Por seguridad y privacidad de datos, en este trabajo no se muestran los inventarios utilizados, para las pruebas. Dichos ficheros de configuración, son compartidos en el repositorio privado donde se deja todo el material creado para este trabajo.
 
 ## Confirmando configuración
-
-> Por seguridad y privacidad de datos, no se muestra el inventario real utilizado para las pruebas. Dicho fichero de configuración es compartido en el repositorio privado donde se deja todo el material creado para este trabajo.
-
-```bash
-cat /etc/ansible/hosts
-```
 
 ```bash
 # Mostrar los host definidos
