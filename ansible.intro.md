@@ -1,6 +1,12 @@
 # Una introducción a Ansible
 
-## Presentacion del laboratorio 2
+Este documento incluye:
+
+- <a href="#pres-labo2">Presentación del laboratorio 2</a>
+- <a href="#ansible-inst">Instalando Ansible</a>
+- <a href="#ansible-modulos">Uso básico de Ansible - _(módulos)_</a>
+
+<h2 id="pres-labo2">Presentacion del laboratorio 2</h2>
 
 Para presentar un uso inicial básico de Ansible, es que se ha desplegado [este laboratorio][laboratorio.2] de pruebas.
 
@@ -8,38 +14,40 @@ Para presentar un uso inicial básico de Ansible, es que se ha desplegado [este 
 
 [laboratorio.2]: img/laboratorio.2.png
 
-## Instalando Ansible en WSL Ubuntu 20.04 LTS
+<h2 id="ansible-inst">Instalando Ansible</h2>
+
+### Instalando Ansible en WSL Ubuntu 20.04 LTS
 
 ```bash
 apt update && apt -y upgrade
 apt install ansible openssh-clients
 ```
 
-## Instalando Ansible en Fedora 34
+### Instalando Ansible en Fedora 34
 
 ```bash
 dnf -y upgrade
 dnf -y install ansible 
 ```
 
-## Configuración inicial e inventario
+### Configuración inicial e inventario
 
 > Una vez instalado, ansible queda disponible de utilizar. Para el laboratorio 2, se ha realizado una modificación menor a la configuración inicial del aplicativo.
 > 
 > Por seguridad y privacidad de datos, en este trabajo no se muestran los inventarios utilizados, para las pruebas. Dichos ficheros de configuración, son compartidos en el repositorio privado donde se deja todo el material creado para estas prácticas.
 
-## Confirmando configuración
+### Confirmando configuración
 
 ```bash
 # Mostrar los host definidos
 ansible all --list-hosts
-# Verificacion a un grupo de host especifico
+# Verificación a un grupo de host específico
 ansible dz_in_anxo --list-hosts
 ```
 
-## Uso básico comando ansible (invocando modulos)
+<h2 id="ansible-modulos">Uso básico comando ansible - _(módulos)_</h2>
 
-En este apartado de muestra un uso básico de Ansible.
+En este apartado de muestra un uso básico e introductorio de Ansible.
 
 El comando `ansible` tiene la siguiente sintaxis:
 
