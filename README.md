@@ -9,7 +9,7 @@ Este documento incluye los siguientes ficheros
   - Se realizan todas las practicas y ejecucion de comandos (comandos presentados/usados: `sshpass`, `parallel-ssh`, `...`)
 
 
-- En [ansible.intro.md](./cli.tools.md) ([PDF aquí](pdf.out/ansible.intro.pdf)) incluye:
+- En [ansible.intro.md](./ansible.intro.md) ([PDF aquí](pdf.out/ansible.intro.pdf)) incluye:
   - Presentación _laboratorio 2_.
   - Instalacion de ansible en __*WSL - Ubuntu 20.04 LTS*__ y en __*Fedora 34*__.
   - Configuracion inicial y el primer inventario.
