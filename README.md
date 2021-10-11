@@ -8,6 +8,13 @@ Este documento incluye los siguientes ficheros
   - El despliegue utilizado para el laboratorio 1. 
   - Se realizan todas las practicas y ejecucion de comandos (comandos presentados/usados: `sshpass`, `parallel-ssh`, `...`)
 
+
+- En [ansible.intro.md](./cli.tools.md) ([PDF aquí](pdf.out/ansible.intro.pdf)) incluye:
+  - Presentación _laboratorio 2_.
+  - Instalacion de ansible en __*WSL - Ubuntu 20.04 LTS*__ y en __*Fedora 34*__.
+  - Configuracion inicial y el primer inventario.
+  - Uso de ansible basico. Modulos `ping` y `command`. 
+
 ---
 
 ## Contenido último
@@ -15,9 +22,12 @@ Este documento incluye los siguientes ficheros
 El último contenido de ficheros en el "directory work" original de este repositorio es:
 
 ```bash
+.
 ├── README.md
+├── ansible.intro.md
 ├── charla.1.drawio
 ├── cli.tools.md
+├── cli.tools.pdf
 ├── img
 │   ├── activar.caract.windows_4.png
 │   ├── activar.subsistema.windows.linux_5.png
@@ -25,6 +35,9 @@ El último contenido de ficheros en el "directory work" original de este reposit
 │   ├── aplicaciones_2.png
 │   ├── ejecutar.powershell.png
 │   ├── laboratorio.1.png
+│   ├── laboratorio.2.ansible.command.png
+│   ├── laboratorio.2.ansible.ping.limit.png
+│   ├── laboratorio.2.png
 │   ├── microsoft_store_6.png
 │   ├── mount.w.png
 │   ├── setting_1.png
@@ -44,7 +57,10 @@ El último contenido de ficheros en el "directory work" original de este reposit
 ├── vm.linux.md
 └── vms
     └── laboratorio.1
-        └── windows.10-disk1.vmdk
+        ├── windows.10-disk1.vmdk
+        ├── windows.10-file1.nvram
+        ├── windows.10.mf
+        └── windows.10.ovf
 ```
 
 Nota del autor: no todos los ficheros son públicos en este repositorio.
