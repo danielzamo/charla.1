@@ -1,6 +1,6 @@
 # Herramientas utilidades para CLI Linux
 
-En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Se muestran algunos ejemplos.
+En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrandose algunos ejemplos. Para este fin se despliegan VMs sobre un laboratorio.
 
 Basicamente en este documento se muestran los siguientes comandos:
 
@@ -11,8 +11,8 @@ Basicamente en este documento se muestran los siguientes comandos:
 
 ## Laboratorio de prueba utilizado para este trabajo
 
-Para este trabajo se ha desplegado [este laboratorio][laboratorio.1] de pruebas, sobre un anfitrión basado en tecnología VMWare, en un Windows 10. Se intenta aquí mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado, y mostrar algunas sesiones de trabajo haciendo uso de un CLI Linux unificado o único/común.
-La escritura de este articulo ha sido realizado en un despliegue llamador laboratorio 1, cuya represetnacion es mostrada [aquí][laboratorio.1].
+Para este trabajo se ha desplegado [este laboratorio][laboratorio.1] de pruebas, sobre un anfitrión basado en tecnología VMWare, en un Windows 10. Se intenta aquí mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado. Mostrando algunas sesiones de trabajo, haciendo uso de un CLI Linux unificado o único/común.
+La escritura de este articulo ha sido realizado en un despliegue llamado laboratorio 1, cuya represetnacion es mostrada [aquí][laboratorio.1].
 
 ![Laboratorio 1][laboratorio.1]
 
@@ -172,8 +172,6 @@ Ejemplo: Consultar que versión de Linux basado en Red Hat tiene instalado el IP
 ```bash
 sshpass -p <PASSWORD_TEXTO_PLANO> ssh root@192.168.20.138 cat /etc/redhat-release
 ```
-
-<h2 id="hello">Hello</h2>
 
 __*Establecer SSHPASS como variable de entorno*__
 
