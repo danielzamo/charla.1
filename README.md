@@ -12,7 +12,7 @@ Este documento incluye los siguientes ficheros
   - Instalacion de ansible en __*WSL - Ubuntu 20.04 LTS*__ y en __*Fedora 34*__.
   - Configuracion inicial y el primer inventario.
   - Uso de ansible basico. Modulos `ping` y `command`.
-- En el fichero [ansible.playbook.intro.md][ansible.playbook.intro]  ([PDF aquí](pdf.out/ansible.playbook.intro.pdf)) se presenta un primer playbook que instala y pre configura Cockpit sobre una VM basada en CentOS 8 Stream.
+- En el fichero [ansible.playbook.intro.md][ansible.playbook.intro.md]  ([PDF aquí](pdf.out/ansible.playbook.intro.pdf)) se presenta un primer playbook que instala y pre configura Cockpit sobre una VM basada en CentOS 8 Stream.
 
 ---
 

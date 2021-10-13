@@ -79,11 +79,16 @@
   - `-vvv` --> se puede dar mayor nivel de verbose del propio comando. Esto sirve para dar mayor nivel de debug a nuestros playbook, para mejor depuración.
   
 ## Interface Cockpit
+Para autenticarnos y utilizar Cockpit se puede ingresar en el navegador `https://my-kvm-centos8:9090` (En los ficheros host - en sis. basados en Windows en `C:\Windows\System32\drivers\etc\hosts` o en sis. op. MACOS y Linux en `/etc/hosts`-  ya he agregado el `IP` y `nombre de dns`). La pantalla de login se muestra [aquí][cockpit.login].
 
-En esta [captura][check.cockpit.my-kvm-centos8] se muestra una de las interfaces del gestor Cockpit, con el usuario root ya autenticado. La instación ha sido realizada sobre el host `my-kvm-centos8` y el servicio iniciado.
+![Login Cockpit][cockpit.login]
 
-![Interface GUI Cockpit][check.cockpit.my-kvm-centos8]
+[cockpit.login]: img/cockpit.login.png
 
-[check.cockpit.my-kvm-centos8]: img/check.cockpit.my-kvm-centos8.png
+En esta [captura][cockpit.my-kvm-centos8] se muestra una de las interfaces del gestor Cockpit, con el usuario root ya autenticado. La instación ha sido realizada sobre el host `my-kvm-centos8` y el servicio iniciado.
+
+![Interface GUI Cockpit][cockpit.my-kvm-centos8]
+
+[cockpit.my-kvm-centos8]: img/cockpit.my-kvm-centos8.png
 
 
