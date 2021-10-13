@@ -24,23 +24,56 @@ El último contenido de ficheros en el "directory work" original de este reposit
 .
 ├── README.md
 ├── ansible.intro.md
+├── ansible.playbook.intro.md
 ├── charla.1.drawio
 ├── cli.tools.md
-├── cli.tools.pdf
+├── etc
+│   └── ansible
+│       ├── ansible.cfg
+│       ├── hosts
+│       ├── inventory.laboratorio.2
+│       └── playbook
+│           ├── ansible-kvm-vm
+│           │   ├── LICENSE
+│           │   ├── README.md
+│           │   ├── defaults
+│           │   │   └── main.yml
+│           │   ├── files
+│           │   │   └── README
+│           │   ├── handlers
+│           │   │   └── main.yml
+│           │   ├── meta
+│           │   │   └── main.yml
+│           │   ├── tasks
+│           │   │   ├── main.yml
+│           │   │   └── teardown_kvm_vm.yml
+│           │   ├── templates
+│           │   │   └── ifcfg.j2
+│           │   ├── test.yml
+│           │   ├── tests
+│           │   │   ├── inventory
+│           │   │   └── test.yml
+│           │   └── vars
+│           │       └── main.yml
+│           └── install.cockpit.centos8.yml
 ├── img
 │   ├── activar.caract.windows_4.png
 │   ├── activar.subsistema.windows.linux_5.png
 │   ├── aplicaciones.y.caracteristicas_3.png
 │   ├── aplicaciones_2.png
+│   ├── cockpit.login.png
+│   ├── cockpit.my-kvm-centos8.png
 │   ├── ejecutar.powershell.png
+│   ├── labo.tmux.png
 │   ├── laboratorio.1.png
 │   ├── laboratorio.2.ansible.command.png
 │   ├── laboratorio.2.ansible.ping.limit.png
-│   ├── laboratorio.2.png
+│   ├── laboratorio.ansible.1.png
 │   ├── microsoft_store_6.png
 │   ├── mount.w.png
 │   ├── setting_1.png
 │   ├── teminal.cli.png
+│   ├── tmux.htop.png
 │   ├── ubuntu.lts.iniciar_10.png
 │   ├── ubuntu.lts.primer.login_11.png
 │   ├── ubuntu.lts_7.png
@@ -48,6 +81,8 @@ El último contenido de ficheros en el "directory work" original de este reposit
 │   ├── ubuntu.lts_9.png
 │   └── vmware.workstation.player.png
 ├── pdf.out
+│   ├── ansible.intro.pdf
+│   ├── ansible.playbook.intro.pdf
 │   ├── cli.tools.pdf
 │   ├── subsistema.windows.p.linux.pdf
 │   └── vm.linux.pdf
