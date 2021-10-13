@@ -2,17 +2,17 @@
 
 Este documento incluye:
 
-- <a href="#pres-labo2">Presentación del laboratorio 2</a>
+- <a href="#laboratorio-1">Presentación del laboratorio 1</a>
 - <a href="#ansible-inst">Instalando Ansible</a>
 - <a href="#ansible-modulos">Uso básico de Ansible - <i>(módulos)</i></a>
 
-<h2 id="pres-labo2">Presentacion del laboratorio 2</h2>
+<h2 id="laboratorio-1">Presentacion del laboratorio 1</h2>
 
-Para presentar un uso inicial básico de Ansible, es que se ha desplegado [este laboratorio][laboratorio.2] de pruebas.
+Para presentar un uso inicial básico de Ansible, es que se ha vuelto a utilizar el [laboratorio 1][laboratorio.1] de pruebas.
 
-![Laboratorio 2][laboratorio.2]
+![Laboratorio 1][laboratorio.1]
 
-[laboratorio.2]: img/laboratorio.2.png
+[laboratorio.1]: img/laboratorio.1.png
 
 <h2 id="ansible-inst">Instalando Ansible</h2>
 
@@ -32,7 +32,7 @@ dnf -y install ansible
 
 ### Configuración inicial e inventario
 
-> Una vez instalado, ansible queda disponible de utilizar. Para el laboratorio 2, se ha realizado una modificación menor a la configuración inicial del aplicativo.
+> Una vez instalado, ansible queda disponible de utilizar. Para el [laboratorio][laboratorio.1], se ha realizado una modificación menor a la configuración inicial del aplicativo (estas modificaciones no son mostradas aquí).
 > 
 > Por seguridad y privacidad de datos, en este trabajo no se muestran los inventarios utilizados, para las pruebas. Dichos ficheros de configuración, son compartidos en el repositorio privado donde se deja todo el material creado para estas prácticas.
 
@@ -90,11 +90,6 @@ La salida del comando es mostrada [aquí][labo2.ansible.command]
 ![Ansible modulo command][labo2.ansible.command]
 
 [labo2.ansible.command]: img/laboratorio.2.ansible.command.png
-
-
-## Provision de VM sobre Vcenter
-
-
 
 ## Referencias
 

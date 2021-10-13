@@ -3,13 +3,11 @@
 Este documento incluye los siguientes ficheros
 
 - En [WSL Linux Sobre Windows 10](./subsistema.windows.p.linux.md) ([PDF aquí](pdf.out/subsistema.windows.p.linux.pdf)) se muestran algunos comentarios respecto a WSL versión 1 y uno de los metodos de instalación/activación.
-- En el [vm.linux.md](./vm.linux.md) ([PDF aquí](pdf.out/vm.linux.pdf)) se enumeran unas pocas arquitecturas de virtualización completa, para el sistema operativo Windows 10/11. Mostrando ademas la interface de la que se utilizara en la presentación que trata este trabajo.
-- En el fichero [cli.tool.md](./cli.tools.md) ([PDF aquí](pdf.out/cli.tools.pdf)) incluye:
-  - El despliegue utilizado para el laboratorio 1. 
-  - Se realizan todas las practicas y ejecucion de comandos (comandos presentados/usados: `sshpass`, `parallel-ssh`, `...`)
-
-
-- En [ansible.intro.md](./ansible.intro.md) ([PDF aquí](pdf.out/ansible.intro.pdf)) incluye:
+- En el [vm.linux.md](./vm.linux.md) ([PDF aquí](pdf.out/vm.linux.pdf)) se enumeran unas pocas arquitecturas de virtualización completa, para el sistema operativo Windows 10/11. Mostrando ademas, la que se utilizará en el desarrollo de este este trabajo.
+- El fichero [cli.tool.md](./cli.tools.md) ([PDF aquí](pdf.out/cli.tools.pdf)) incluye:
+  - La representación del despliegue utilizado para el laboratorio 1. 
+  - Se realizan todas las practicas y ejecucion de comandos (comandos presentados/usados: `sshpass`, `parallel-ssh`, `tmux`, ...)
+- El [ansible.intro.md](./ansible.intro.md) ([PDF aquí](pdf.out/ansible.intro.pdf)) incluye:
   - Presentación _laboratorio 2_.
   - Instalacion de ansible en __*WSL - Ubuntu 20.04 LTS*__ y en __*Fedora 34*__.
   - Configuracion inicial y el primer inventario.

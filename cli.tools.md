@@ -1,6 +1,6 @@
 # Herramientas utilidades para CLI Linux
 
-En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrándose algunos ejemplos. Para esta exposicion se despliegan VMs sobre dos laboratorios.
+En este documento se instalan y hace uso de algunas herramientas para utilizar desde el CLI (command-line interface) de sistemas operativos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, CentOS y/o similares). Para esta exposición se despliegan VMs a modo de laboratorios.
 
 Básicamente en este documento se muestran los siguientes comandos:
 
@@ -11,10 +11,14 @@ Básicamente en este documento se muestran los siguientes comandos:
 
 ## Laboratorios utilizados para este trabajo
 
-Para este trabajo se han desplegado [dos laboratorios]. Estos son:
+Para este trabajo se desplego el [laboratorio 1][laboratorio.1] de prueba. Dicho despliegue consiste de:
+- Un host anfitrión de virtualización VMWare (paradigma virtualización completa) sobre un sis. op. Windows 10. Sobre este mismo host Windows, se habilito WSL (Windows Subsystem Linux) versión 1 e instalo Ubuntu 20.04 LTS.
+  - Sobre el host VMWare se despliegan al menos dos VM. Estas son:
+    - Una con Fedora versión 34, spin Xfce.
+    - Un CentOS 8 Stream, en una instalación minima (sin ambiente gráfico). 
+- En un host remoto (de tecnologia VMWare, paradigma virtualización completa) se ha desplegado al menos un guest con CentOS 7, en instación también mínima. 
 
-- El [laboratorio 1][laboratorio.1] de pruebas, sobre un anfitrión basado en tecnología VMWare, en un Windows 10. Se intenta aquí mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado. Mostrando algunas sesiones de trabajo, haciendo uso de un CLI Linux unificado o único/común.
-- Basado en el anterior despliegue, se proveen otras VM, resultando el [laboratorio 2][laboratorio.2], sobre el cual se ejecutan los comandos que se detallan en este documento.
+En este trabajo, se intenta mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado. Mostrando algunas sesiones de trabajo, haciendo uso de un CLI Linux unificado o único/común.
 
 > Laboratorio 1
 
@@ -22,15 +26,9 @@ Para este trabajo se han desplegado [dos laboratorios]. Estos son:
 
 [laboratorio.1]: img/laboratorio.1.png
 
-> Laboratorio 2
-
-![Laboratorio 2][laboratorio.2]
-
-[laboratorio.2]: img/laboratorio.2.png
-
 ## Introducción a gestion de paquetes
 
-### Instalación de paquetes sobre Fedora 31 y/o superiores
+### Instalación de paquetes sobre Fedora 21 y/o superiores
 
 `sudo dnf -y install rsync nmap lsof`
 
