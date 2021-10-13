@@ -2,8 +2,11 @@
 
 ## Objetivo
 
-> En este laboratorio se instala Cockpit sobre CentOS 8 Stream (y/o derivados), mediante la ejecución de un plan de jugada (playbook) de Ansible, en el host `my-kvm-centos8` del [laboratorio][laboratorio.ansible.1]. Estos mismos pasos deberían de funcionar sobre un RHEL 8 y derivados.
-> El playbook se ejecuta desde el WSL ubuntu 20.04 LTS.
+> En este laboratorio se introduce el uso de un simple playbook. El mismo instala _Cockpit_ sobre _CentOS 8 Stream_ (y/o derivados). Esto es, mediante la ejecución de un plan de jugada (playbook) de Ansible, sobre el host `my-kvm-centos8` del [laboratorio][laboratorio.ansible.1] se instalará la interface *consola web de administración __Cockpit__* . 
+> 
+> Estos mismos pasos deberían de funcionar sobre un RHEL 8 y/o derivados. 
+
+_Nota:_ El playbook se ejecuta desde el WSL ubuntu 20.04 LTS. Pero debería ser funcional desde cualquier Ansible de versión similar al aquí utilizado.
 
 ## Representación del laboratorio
 
