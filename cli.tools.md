@@ -208,17 +208,19 @@ sshpass -e ssh -o "StrictHostKeyChecking no" root@192.168.20.138 uptime
 
 Nota: `'<MY_PASSWORD_HOST_REMOTE>'` es el password del usuario del servidor ssh al que se quiere conectar.
 
-## Multiplexor de terminales
+<h2 id="multiplexor-term">Multiplexor de terminales</h2>
 
 Multiplexar la terminal tty del CLI de Linux suele ser practico para gestionar los servidores desde un ordenador remoto. Con este tipo de programas nos permite tener múltiples terminales dentro una sola ventana.
 Existen varias alternativas para esta funcionalidad. Algunas de las posibles son:
 
-- `Terminator`
-- `Screen`
+- `Terminator` ---> requiere de librerias mas propias del subsistema ambiente gráfico de Linux.
+- `Screen` ---> es quizas la herramienta de este tipo, con mayor trayectoria.
 - `Tmux`
-- `Byobu`
+- `Byobu` ---> soporta `tty` virtuales tanto de `tmux` como de `screen`
 
 En este documento se presenta `tmux`.
+
+## Tmux
 
 ### Instalar tmux en Fedora 21 y/o superiores/derivados
 
@@ -234,7 +236,7 @@ apt -y update && apt -y upgrade
 apt -y install tmux
 ```
 
-### Uso simple de tmux
+### Uso básico de tmux
 
 __*Algunas combinación de teclas*__
 
