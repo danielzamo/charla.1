@@ -166,14 +166,14 @@ apt install rsync dnsutils
 
 ## Referencias
 
-- [Instalacion de WSL][inst.wsl] 
+- [Instalación de WSL][inst.wsl] 
 - [Install Windows Subsytem Linux Windwos 10][inst.wsl.win]
 - [Ubuntu 20.04 vs. Windows 10 WSL/WSL2 Performance In 170+ Benchmarks][comparative.wsl.vs.ubuntu]
 - [Comparación de WSL 1 con WSL 2][comparacion.wsl.1.2] 
 
 [comparacion.wsl.1.2]: https://docs.microsoft.com/es-es/windows/wsl/compare-versions
 
-[inst.wsl]: https://docs.microsoft.com/es-es/windows/wsl/install "Instalacion de WSL en Windows 10"
+[inst.wsl]: https://docs.microsoft.com/es-es/windows/wsl/install "Instalación de WSL en Windows 10"
 [inst.wsl.win]: https://www.windowscentral.com/install-windows-subsystem-linux-windows-10
 [comparative.wsl.vs.ubuntu]: https://www.phoronix.com/scan.php?page=article&item=wsl-wsl2-tr3970x&num=1
 

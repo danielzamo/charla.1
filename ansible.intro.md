@@ -4,7 +4,7 @@ Este documento incluye:
 
 - <a href="#pres-labo2">Presentación del laboratorio 2</a>
 - <a href="#ansible-inst">Instalando Ansible</a>
-- <a href="#ansible-modulos">Uso básico de Ansible - _(módulos)_</a>
+- <a href="#ansible-modulos">Uso básico de Ansible - <i>(módulos)</i></a>
 
 <h2 id="pres-labo2">Presentacion del laboratorio 2</h2>
 
@@ -45,7 +45,7 @@ ansible all --list-hosts
 ansible dz_in_anxo --list-hosts
 ```
 
-<h2 id="ansible-modulos">Uso básico comando ansible - _(módulos)_</h2>
+<h2 id="ansible-modulos">Uso básico comando ansible - <i>(módulos)</i></h2>
 
 En este apartado de muestra un uso básico e introductorio de Ansible.
 
@@ -92,8 +92,15 @@ La salida del comando es mostrada [aquí][labo2.ansible.command]
 [labo2.ansible.command]: img/laboratorio.2.ansible.command.png
 
 
+## Provision de VM sobre Vcenter
+
+
+
 ## Referencias
 
 - Documentación [módulos de Ansible][ansible.modules].
+- https://github.com/ansible-collections/community.vmware
+- https://www.virtualizationhowto.com/2021/01/ansible-provisioning-vmware-with-vmware_guest-example/
+- https://docs.ansible.com/ansible/latest/collections/community/vmware/vmware_host_module.html
 
 [ansible.modules]: https://docs.ansible.com/ansible/latest/modules/modules_by_category.html

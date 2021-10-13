@@ -6,7 +6,7 @@ Básicamente en este documento se muestran los siguientes comandos:
 
 - <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
 - <a href="#sshpass">`sshpass`</a> --> para automatizar el ingreso de la password, en la autenticación sobre servidores ssh, (configuración de acceso vía contraseñas (__*"advertencia"*__)).
-- `tmux` --> como multiplexor de terminales.
+- <a href="#multiplexor-term">Multiplexor de terminales</a> --> uso de `tmux`.
 - `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
 
 ## Laboratorio de prueba utilizado para este trabajo
@@ -208,8 +208,75 @@ sshpass -e ssh -o "StrictHostKeyChecking no" root@192.168.20.138 uptime
 
 Nota: `'<MY_PASSWORD_HOST_REMOTE>'` es el password del usuario del servidor ssh al que se quiere conectar.
 
-<a href="#hello">Hello</a>
+## Multiplexor de terminales
 
+Multiplexar la terminal tty del CLI de Linux suele ser practico para gestionar los servidores desde un ordenador remoto. Con este tipo de programas nos permite tener múltiples terminales dentro una sola ventana.
+Existen varias alternativas para esta funcionalidad. Algunas de las posibles son:
+
+- `Terminator`
+- `Screen`
+- `Tmux`
+- `Byobu`
+
+En este documento se presenta `tmux`.
+
+### Instalar tmux en Fedora 21 y/o superiores/derivados
+
+```bash
+dnf -y update
+dnf -y install tmux
+```
+
+### Instalar tmux sobre WSL - Ubuntu 20.04 LTS (y/o derivados/similares)
+
+```bash
+apt -y update && apt -y upgrade
+apt -y install tmux
+```
+
+### Uso simple de tmux
+
+__*Algunas combinación de teclas*__
+
+
+_Sesiones - sessions:_
+`:new<CR>`  new session
+`s`  list sessions
+`$`  name session
+
+_Ventanas - windows (tabs):_
+`c`  create window
+`w`  list windows
+`n`  next window
+`p`  previous window
+`f`  find window
+`,`  name window
+`&`  kill window
+
+_Paneles - Panes (splits)_
+`%`  vertical split
+`"`  horizontal split
+
+`o`  swap panes
+`q`  show pane numbers
+`x`  kill pane
+`+`  break pane into window (e.g. to select text by mouse to copy)
+`-`  restore pane from window
+`⍽`  space - toggle between layouts
+
+
+_Ejemplo:_ Conectarse a los 3 servidores y ejecutar el comando `htop`
+
+- Combinaciones de teclas usadas:
+  - `CTRL+b+"` --> dividir pantalla en dos paneles horizontales
+  - `CTRL+b+%` --> dividir pantalla en dos paneles verticales
+  - `CTRL+b+:setw synchronize-panes [on/off]` --> sincronizar ventanas, para ejecutar un mismo comando en los diferentes `tty`
+
+En la [captura][tmux.htop] se muestra la salida del comando `htop` lanzado en forma sincronizada sobre las VM: `WLS - Ubuntu 20.04`, `fedora-xfce` y `my-c7-n2`
+
+![htop via tmux][tmux.htop]
+
+[tmux.htop]: img/tmux.htop.png
 
 ## Ejecutando comandos en paralelo, sobre varios servidores
 
