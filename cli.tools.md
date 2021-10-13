@@ -1,22 +1,32 @@
 # Herramientas utilidades para CLI Linux
 
-En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrándose algunos ejemplos. Para este fin se despliegan VMs sobre un laboratorio.
+En este documento se enumeran algunas de los paquetes y/o herramientas para utilizar desde el CLI (command-line interface) de sistemas operatvivos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, o similares). Mostrándose algunos ejemplos. Para esta exposicion se despliegan VMs sobre dos laboratorios.
 
 Básicamente en este documento se muestran los siguientes comandos:
 
 - <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
 - <a href="#sshpass">`sshpass`</a> --> para automatizar el ingreso de la password, en la autenticación sobre servidores ssh, (configuración de acceso vía contraseñas (__*"advertencia"*__)).
 - <a href="#multiplexor-term">Multiplexor de terminales</a> --> uso de `tmux`.
-- `---` --> ejecución de comandos en varios host/servidores remotos a la vez, a través de SSH.
+- Ejecución de comandos en paralelo, sobre varios host/servidores remotos a la vez, a través de SSH. En particular uso de `pssh`
 
-## Laboratorio de prueba utilizado para este trabajo
+## Laboratorios utilizados para este trabajo
 
-Para este trabajo se ha desplegado [este laboratorio][laboratorio.1] de pruebas, sobre un anfitrión basado en tecnología VMWare, en un Windows 10. Se intenta aquí mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado. Mostrando algunas sesiones de trabajo, haciendo uso de un CLI Linux unificado o único/común.
-La escritura de este articulo ha sido realizado en un despliegue llamado laboratorio 1, cuya represetnacion es mostrada [aquí][laboratorio.1].
+Para este trabajo se han desplegado [dos laboratorios]. Estos son:
+
+- El [laboratorio 1][laboratorio.1] de pruebas, sobre un anfitrión basado en tecnología VMWare, en un Windows 10. Se intenta aquí mostrar/debatir, una arquitectura que sirva de base a un despliegue común o consensuado. Mostrando algunas sesiones de trabajo, haciendo uso de un CLI Linux unificado o único/común.
+- Basado en el anterior despliegue, se proveen otras VM, resultando el [laboratorio 2][laboratorio.2], sobre el cual se ejecutan los comandos que se detallan en este documento.
+
+> Laboratorio 1
 
 ![Laboratorio 1][laboratorio.1]
 
 [laboratorio.1]: img/laboratorio.1.png
+
+> Laboratorio 2
+
+![Laboratorio 2][laboratorio.2]
+
+[laboratorio.2]: img/laboratorio.2.png
 
 ## Introducción a gestion de paquetes
 
@@ -238,8 +248,7 @@ apt -y install tmux
 
 ### Uso básico de tmux
 
-__*Algunas combinación de teclas*__
-
+__*Combinación de teclas*__
 
 _Sesiones - sessions:_
 `:new<CR>`  new session
@@ -282,12 +291,28 @@ En la [captura][tmux.htop] se muestra la salida del comando `htop` lanzado en fo
 
 ## Ejecutando comandos en paralelo, sobre varios servidores
 
-### Instalando pssh sobre el WSL - Ubuntu 20.04 LTS
+Aunque en este tipo de paquetes tambien son varias las opciones, en este apartado se muestra la instalacion y uso básico/inicial de `pssh`. Se utiliza esta, pues es una herramienta que se puede instalar y usar funciona tanto en WSL - Ubuntu como en un Linux puro/completo.
+
+### Instalando pssh sobre debian y/o derivados (ejemplo WSL - Ubuntu 20.04 LTS)
 
 ```bash
 sudo su
 apt update && apt -y upgrade
 apt -y install pssh
+```
+
+### Instalando pssh sobre CentOS 7
+
+```bash
+yum -y update
+yum -y --enablerepo epel install pssh
+```
+
+### Instalando pssh sobre CentOS8 Stream (y derivados) y/o Fedora 21 o superior
+
+```bash
+dnf -y update
+dnf -y --enablerepo epel install pssh
 ```
 
 ---
