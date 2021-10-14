@@ -91,10 +91,15 @@ El último contenido de ficheros en el "directory work" original de este reposit
 ├── vm.linux.md
 └── vms
     └── laboratorio.1
-        ├── windows.10-disk1.vmdk
-        ├── windows.10-file1.nvram
-        ├── windows.10.mf
-        └── windows.10.ovf
+        ├── fedora-xfce
+        │   ├── my-fedora-xfce-disk1.vmdk
+        │   ├── my-fedora-xfce.mf
+        │   └── my-fedora-xfce.ovf
+        └── windows.10
+            ├── windows.10-disk1.vmdk
+            ├── windows.10-file1.nvram
+            ├── windows.10.mf
+            └── windows.10.ovf
 ```
 
 Nota del autor: no todos los ficheros son públicos en este repositorio.
