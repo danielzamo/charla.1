@@ -2,12 +2,12 @@
 
 En este documento se instalan y hace uso de algunas herramientas para utilizar desde el CLI (command-line interface) de sistemas operativos orientados al comando, del tipo basados en Unix (WSL Windows, VM Fedora Linux, CentOS y/o similares). Para esta exposición se despliegan VMs a modo de laboratorios.
 
-Básicamente en este documento se muestran los siguientes comandos:
+En este documento se muestran los siguientes comandos:
 
 - <a href="#nmap">`nmap`</a> para descubrir los hosts encendidos actuales.
 - <a href="#sshpass">`sshpass`</a> --> para automatizar el ingreso de la password, en la autenticación sobre servidores ssh, (configuración de acceso vía contraseñas (__*"advertencia"*__)).
 - <a href="#multiplexor-term">Multiplexor de terminales</a> --> uso de `tmux`.
-- Ejecución de comandos en paralelo, sobre varios host/servidores remotos a la vez, a través de SSH. En particular uso de `pssh`
+- <a href="#parallel-ssh">`pssh`</a> utilizado para la ejecución de comandos en paralelo, sobre varios host/servidores remotos a la vez, vía de SSH (autenticación mediante clave privada/pública).
 
 ## Laboratorios utilizados para este trabajo
 
@@ -287,9 +287,9 @@ En la [captura][tmux.htop] se muestra la salida del comando `htop` lanzado en fo
 
 [tmux.htop]: img/tmux.htop.png
 
-## Ejecutando comandos en paralelo, sobre varios servidores
+<h2 id="parallel-ssh">Ejecutando comandos en paralelo, sobre varios servidores</h2>
 
-Aunque en este tipo de paquetes tambien son varias las opciones, en este apartado se muestra la instalacion y uso básico/inicial de `pssh`. Se utiliza esta, pues es una herramienta que se puede instalar y usar funciona tanto en WSL - Ubuntu como en un Linux puro/completo.
+Para este tipo de comandos existen tambien varias opciones. En este apartado se muestra la instalación y uso básico/inicial de `pssh`. Se utiliza esta, pues es una herramienta que se puede instalar y funciona tanto en WSL - Ubuntu como en un Linux puro/completo.
 
 ### Instalando pssh sobre debian y/o derivados (ejemplo WSL - Ubuntu 20.04 LTS)
 
@@ -313,6 +313,68 @@ dnf -y update
 dnf -y --enablerepo epel install pssh
 ```
 
+### Ejemplos de uso de pssh (parallel ssh)
+
+Para los ejemplos siguientes se han definido reglas fordward de ssh, para mediante el puerto conectarse a diferentes de las VMs. Las reglas forward definidas se resumen en la siguiente tabla.
+
+comando ejecutado| puerto en el anfitrion| ip del guest virtual|puerto del guest| VM guest 
+--:| :--:| :--:| :--:| :--
+`ssh -p 22 127.0.0.1 22`| 22| 192.168.20.133| 22| fedora-xfce
+`ssh -p 22 127.0.0.1 2222`| 2222| 192.168.20.138| 22| centos-stream8-n1
+`ssh -p 22 127.0.0.1 2139`| 2139| 192.168.20.139| 22| kvm-centos-stream-8
+
+Para ejecutar parallel ssh, es necesario autenticar la conexión ssh via clave privada/pública. 
+Si intentamos usar `pssh` autenticando con ssh por contraseña dara un error. 
+
+_[1]_ Se define el fichero de host con los target destinos de los comandos `pssh` a ejecutar.
+
+```bash
+# cat target.vm.locales
+root@127.0.0.1:22
+root@127.0.0.1:2222
+root@127.0.0.1:2139
+```
+
+_[2]_ Ejecutando pssh con validación por contraseña (Da ERROR!)
+
+Al no tener las claves privadas/publicas copiadas, la ejecución de `parallel-ssh` dara error un error. Esto se muestra en [esta captura][pssh.error]
+
+Ejecutamos `parallel-ssh -h target.vm.locales uptime` la salida es mostrada a continuación.
+
+![Parallel ssh, intento mediante contraseña][pssh.error]
+
+[pssh.error]: img/parallel.ssh.error.png
+
+_[3]_ Para ejecutar pssh, se copia la clave pública
+
+En la [captura][ssh-copy-id] se copian las claves a dos de los servidores (`192.168.20.133` y `192.168.20.138`)
+
+![ssh-copy-id][ssh-copy-id]
+
+[ssh-copy-id]: img/ssh-copy-id.png
+
+_[4]_ Se vuelve a ejecutar el comando inicial
+
+Volvemos a ejecutar `parallel-ssh -h target.vm.locales uptime`.
+
+La salida es motrada [aquí][parallel.ssh.ok]. Observar que el host `192.168.20.139` da aun error. El host puede estar apagado, no accesible o la validación ssh esta aun por contraseña (en este ejemplo este es el caso).
+
+![pssh ok][parallel.ssh.ok]
+
+[parallel.ssh.ok]: img/parallel.ssh.ok.png
+
+_[5]_ Ejecución de varios comandos en varios servidores
+
+Se pueden ejecutar varios comandos, o hasta un script, y estos seran ejecutados de forma paralela sobre todos los host conf. en el fichero.
+
+Se ejecuta `parallel-ssh -i -h target.vm.locales "uptime; nproc; uname --all; hostname; hostname -I"`
+
+La salida de los comandos se muestran en la [captura][parallel.ssh.varios.cmds].
+
+![Parallel ssh (pssh)][parallel.ssh.varios.cmds]
+
+[parallel.ssh.varios.cmds]: img/parallel.ssh.varios.cmds.png
+
 ---
 
 ---
@@ -321,6 +383,9 @@ dnf -y --enablerepo epel install pssh
 
 - [4 Useful Tools to Run Commands on Multiple Linux Servers][tools.cmds.multiple.linux] 
 - [How to use parallel ssh (PSSH) for executing commands in parallel on a number of Linux/Unix/BSD servers][pssh.use] 
+- [pssh - herramienta][ssh.pssh] para ejecutar comandos en multiples servidores
+
+[ssh.pssh]: https://www.ochobitshacenunbyte.com/2018/04/25/pssh-herramienta-para-ejecutar-comandos-en-multiples-servidores-via-ssh/
   
 [pssh.use]:https://www.cyberciti.biz/cloud-computing/how-to-use-pssh-parallel-ssh-program-on-linux-unix/
 
